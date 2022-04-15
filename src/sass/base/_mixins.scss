@@ -11,3 +11,15 @@
         border-radius: 100%;
     }    
 }
+@mixin aside_backgroundColorLink {
+    &::after{
+                position: absolute;
+                content: '';
+                width: 19px;
+                height: 15px;
+                left: 1px;
+                top: 5px;
+                z-index: -1;
+                background-color: #fff;
+            }    
+}

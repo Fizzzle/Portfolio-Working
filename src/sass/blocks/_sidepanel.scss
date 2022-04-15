@@ -26,4 +26,38 @@
             width: 150px;
         }
     }
+    &__link{
+        position: relative;      
+        svg path{
+            transition: fill .5s;
+        }
+        &:nth-child(3):hover{
+            @include aside_backgroundColorLink;
+            &:after{
+                border-radius: 100%;
+                background-color: #000;
+            }
+            svg path{
+                fill:#fff;
+            }
+        }
+        &:nth-child(2):hover{
+            @include aside_backgroundColorLink;
+            &:after{
+                border-radius: 30%;
+            }
+            svg path{                
+                fill: #833AB4
+    
+            }
+        }
+        &:nth-child(1):hover{
+            @include aside_backgroundColorLink;            
+            svg path{                
+                fill: #3b5998
+            }
+        }
+        
+    }
+
 }
