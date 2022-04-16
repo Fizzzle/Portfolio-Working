@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 340px;
+    height: 360px;
     position: fixed;
     top: 230px;
     left: 30px;
@@ -20,18 +20,20 @@
         font-weight: 700;
         font-size: 16px;
         // line-height: 24px;
+        // color: #000;
         span {
             display: block;            
-            transform: rotate(-90deg) translate(-30%, -260%);
-            width: 150px;
+            transform: rotate(-90deg) translate(-30%, -280%);
+            width: 160px;
         }
     }
     &__link{
-        position: relative;      
+        position: relative;    
         svg path{
             transition: fill .5s;
         }
-        &:nth-child(3):hover{
+        
+        &:nth-child(4):hover{
             @include aside_backgroundColorLink;
             &:after{
                 border-radius: 100%;
@@ -41,7 +43,7 @@
                 fill:#fff;
             }
         }
-        &:nth-child(2):hover{
+        &:nth-child(3):hover{
             @include aside_backgroundColorLink;
             &:after{
                 border-radius: 30%;
@@ -51,12 +53,24 @@
     
             }
         }
-        &:nth-child(1):hover{
+        &:nth-child(2):hover{
             @include aside_backgroundColorLink;            
             svg path{                
                 fill: #3b5998
             }
         }
+        &:nth-child(1){
+            transform: rotate(-70deg);                    
+            &:hover{
+                @include aside_backgroundColorLink;
+                &:after{
+                    border-radius: 100%
+                }            
+                svg path{                
+                    fill: #0088cc;
+                }
+            }
+        }            
         
     }
 
