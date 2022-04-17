@@ -1,9 +1,11 @@
 .price{
     padding-top: 66px;
     &__wrapper{
-        padding: 60px 50px 0 50px;
+        margin-top: 60px;
+        padding: 0 60px;
         display: grid;
-        grid-template: repeat(3, 44px) / repeat(2, 366px);
+        grid-template: repeat(2, minmax(44px, auto)) / repeat(2, 366px);
+        grid-auto-rows: minmax(45px, auto);
         justify-content: space-between;
         align-content: space-between;   
     }
@@ -12,8 +14,9 @@
         row-gap: 15px;             
     }
     &__item{
+        position: relative;
         display: grid;
-        grid-template-columns: auto 151px;
+        grid-template: repeat(2, minmax(21px, auto)) / repeat(2, auto);
         justify-content: space-between;        
     }
     &__title{
