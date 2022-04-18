@@ -9,6 +9,10 @@
     &_fz16 {
         font-size: 16px;
         line-height: 24px;
+        transition: transform .6s;
+        &:hover{
+            transform: scale(1.05);
+        }
     }
     &_fz20{
         font-size: 20px;
@@ -33,4 +37,5 @@
     &__section-subtitle{
         text-align: center;
     }
+    
 }
