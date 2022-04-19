@@ -60,7 +60,7 @@
         font-size: 24px;
         line-height: 36px;
         text-transform: uppercase;
-        margin-bottom: 15px;        
+        margin-bottom: 15px;     
         &::before{
             content: '';
             position: absolute;
@@ -94,7 +94,19 @@
         bottom: 50px;
         left: 50%;
         transform: translateX(-50%);
+        svg path{
+            transition: fill .5s;
+        }
         a:nth-child(1):hover{
+            @include aside_backgroundColorLink;
+                &:after{
+                    background-color:#000;                    
+                    left: 2px;
+                    top: 6px;
+                    border-radius: 100%;
+                    width: 15px;
+                    height: 17px;
+                }
             svg path{
                 fill:white;
             }
@@ -105,9 +117,35 @@
 
             }
         }
-        a:nth-child(3):hover{
-            svg path{
-                fill: #3b5998
+        a:nth-child(3){
+            &:hover{
+                @include aside_backgroundColorLink;
+                &:after{
+                    left: 52px;
+                    top: 7px;
+                    border-radius: 100%;
+                    width: 14px;
+                    height: 16px;
+                }
+                svg path{
+                    fill: #3b5998
+                }
+            }
+        }
+        a:nth-child(4){
+            &:hover{
+                @include aside_backgroundColorLink;
+                &:after{
+                    left: 73px;
+                    top: 7px;
+                    border-radius: 100%;
+                    width: 13px;
+                    height: 15px;
+
+                }
+                svg path{
+                    fill: #0088cc;
+                }
             }
         }
     }
