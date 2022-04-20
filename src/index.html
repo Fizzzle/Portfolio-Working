@@ -43,11 +43,12 @@
     <meta name="msapplication-TileImage" content="icons/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
-    <aside class="sidepanel">
+    <aside data-aos="zoom-in-up" data-aos-duration="800" class="sidepanel">
         <a href="https://telegram.me/fizwallet" class="sidepanel__link">
             <svg width="22" height="22" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512">
                 <path
@@ -97,12 +98,12 @@
 
             <nav>
                 <ul class="menu__list">
-                    <li class="menu__link"><a href="">Про меня</a></li>
-                    <li class="menu__link"><a href="">Мой опыт</a></li>
-                    <li class="menu__link"><a href="">Мои навыки</a></li>
-                    <li class="menu__link"><a href="">Мои работы</a></li>
-                    <li class="menu__link"><a href="">прайс-лист</a></li>
-                    <li class="menu__link"><a href="">контакты</a></li>
+                    <li class="menu__link"><a href="#about">Про меня</a></li>
+                    <li class="menu__link"><a href="#resume">Мой опыт</a></li>
+                    <li class="menu__link"><a href="#skills">Мои навыки</a></li>
+                    <li class="menu__link"><a href="#portfolio">Мои работы</a></li>
+                    <li class="menu__link"><a href="#price">прайс-лист</a></li>
+                    <li class="menu__link"><a href="#contacts">контакты</a></li>
                 </ul>
             </nav>
 
@@ -155,28 +156,30 @@
             <span></span>
         </div>
         <div class="container">
-            <div class="title promo__subtitle title_fz16">Меня зовут Виктор Наустинный</div>
-            <h1 class="title title_fz48 promo__title">Я web-разработчик из города Одесса</h1>
-            <div class="promo__btns">
-                <a href="#" class="promo__link btn">Портфолио</a>
-                <a href="#" class="promo__link">Про меня</a>
+            <div data-aos="zoom-in" class="title promo__subtitle title_fz16">Меня зовут Виктор Наустинный</div>
+            <h1 data-aos="zoom-in" class="title title_fz48 promo__title">Я web-разработчик из города Одесса</h1>
+            <div data-aos="zoom-in" class="promo__btns">
+                <a href="#portfolio" class="promo__link btn">Портфолио</a>
+                <a href="#about" class="promo__link">Про меня</a>
             </div>
         </div>
     </section>
 
-    <section class="about">
+    <section id="about" class="about">
         <div class="container">
             <div class="about__wrapper">
-                <div class="about__photo">
+                <div data-aos="zoom-in-up" class="about__photo">
                     <picture>
                         <img src="img/main_photo.jpg" alt="photo">
                     </picture>
                 </div>
                 <div class="about__descr">
-                    <h2 class="title title_fz16 about__title">Про меня</h2>
-                    <div class="title title_fz36 about__subtitle">Меня зовут Виктор</div>
-                    <div class="divider"></div>
-                    <p class="about__text">Я начинающий web-разработчик, на данный момент я только начинаю, но уже готов
+                    <h2 data-aos="fade-up" data-aos-duration="800" class="title title_fz16 about__title">Про меня</h2>
+                    <div data-aos="fade-up" data-aos-duration="1000" class="title title_fz36 about__subtitle">Меня зовут
+                        Виктор</div>
+                    <div data-aos="fade-up" data-aos-duration="1200" class="divider"></div>
+                    <p data-aos="fade-up" data-aos-duration="1200" class="about__text">Я начинающий web-разработчик, на
+                        данный момент я только начинаю, но уже готов
                         браться за крутые заказы и выполнять </p>
                 </div>
                 <div class="about__skills">
@@ -229,11 +232,12 @@
         </div>
     </section>
 
-    <section class="resume">
+    <section id="resume" class="resume">
         <div class="container">
-            <h2 class="title title_fz16 title__section-title">Опыт</h2>
-            <div class="title title_fz36 title__section-subtitle">Чем я буду полезен</div>
-            <div class="divider"></div>
+            <h2 data-aos="zoom-in-up" data-aos-duration="800" class="title title_fz16 title__section-title">Опыт</h2>
+            <div data-aos="zoom-in-up" data-aos-duration="900" class="title title_fz36 title__section-subtitle">Чем я
+                буду полезен</div>
+            <div data-aos="zoom-in-up" data-aos-duration="1000" class="divider"></div>
 
             <div class="resume__wrapper">
                 <div class="resume__column">
@@ -310,11 +314,12 @@
         </div>
     </section>
 
-    <section class="skills">
+    <section id="skills" class="skills">
         <div class="container">
-            <h2 class="title title_fz16 title__section-title">Навыки</h2>
-            <div class="title title_fz36 title__section-subtitle">Что я использую в работе</div>
-            <div class="divider"></div>
+            <h2 data-aos="zoom-in-up" data-aos-duration="800" class="title title_fz16 title__section-title">Навыки</h2>
+            <div data-aos="zoom-in-up" data-aos-duration="900" class="title title_fz36 title__section-subtitle">Что я
+                использую в работе</div>
+            <div data-aos="zoom-in-up" data-aos-duration="1000" class="divider"></div>
             <div class="skills__wrapper">
                 <div class="skills__item">
                     <img src="./icons/skills/html5.svg" alt="html">
@@ -354,11 +359,10 @@
                 </div>
                 <div class="skills__item">
                     <div class="skills__icons"><img src="./icons/skills/bootstrap.svg" alt="jquery"></div>
-                    <div class="skills__name">Jquery</div>
+                    <div class="skills__name">Bootstrap</div>
                     <div class="skills__descr">
-                        Библиотека Jquery позволит ускорить разработку. Без необходимости интегрировать в проект мы её
-                        не будем, но навык работы
-                        с ней присутствует
+                        набор инструментов для создания сайтов и веб-приложений. Помогающий создавать сайты в несколько
+                        раз быстрее
                     </div>
                 </div>
                 <!-- <div class="skills__item">
@@ -419,11 +423,13 @@
         </div>
     </section>
 
-    <!-- <section class="portfolio">
+    <section id="portfolio" class="portfolio">
         <div class="container">
-            <h2 class="title title_fz16 title__section-title">Портфолио</h2>
-            <div class="title title_fz36 title__section-subtitle">Мои работы</div>
-            <div class="divider"></div>
+            <h2 data-aos="zoom-in-up" data-aos-duration="800" class="title title_fz16 title__section-title">Портфолио
+            </h2>
+            <div data-aos="zoom-in-up" data-aos-duration="900" class="title title_fz36 title__section-subtitle">Мои
+                работы</div>
+            <div data-aos="zoom-in-up" data-aos-duration="950" class="divider"></div>
 
             <div class="portfolio__wrapper">
                 <a href="" class="portfolio__item">
@@ -446,12 +452,13 @@
                 </a>
             </div>
         </div>
-    </section> -->
+    </section>
 
-    <!-- <section class="price">
+    <section id="price" class="price">
         <div class="container">
-            <h2 class="title title_fz16 title__section-title">Прайс-лист</h2>
-            <div class="divider"></div>
+            <h2 data-aos="zoom-in-up" data-aos-duration="800" class="title title_fz16 title__section-title">Прайс-лист
+            </h2>
+            <div data-aos="zoom-in-up" data-aos-duration="900" class="divider"></div>
             <div class="price__wrapper">
                 <ul class="price__list">
                     <li class="price__item">
@@ -480,11 +487,11 @@
                 </ul>
             </div>
         </div>
-    </section> -->
+    </section>
 
-    <!-- <section class="contacts">
+    <section id="contacts" class="contacts">
         <div class="container">
-            <div class="contacts__wrapper">
+            <div data-aos="zoom-in-up" data-aos-duration="800" class="contacts__wrapper">
                 <div class="contacts__photo">
                     <img src="./img/main_photo.jpg" alt="photo">
                 </div>
@@ -495,14 +502,14 @@
 
                     <div class="title title_fz14 contacts__text">Любым удобным для вас способом:</div>
                     <div class="contacts__social">
-                        <a href="#" class="contacts__link">
+                        <a href="https://www.facebook.com/victor.naustinniy" class="contacts__link">
                             <img src="./icons/social/facebook.svg" alt="facebook"></a>
-                        <a href="#" class="contacts__link">
+                        <a href="https://telegram.me/fizwallet" class="contacts__link">
                             <img src="./icons/social/telegram.svg" alt="telegram"></a>
-                        <a href="#" class="contacts__link">
+                        <a href="https://www.instagram.com/naustinniyvictor/" class="contacts__link">
                             <img src="./icons/social/instagram.svg" alt="instagram"></a>
                     </div>
-                    <div class="title title_fz14 contacts__text">
+                    <!-- <div class="title title_fz14 contacts__text">
                         Или оставьте ваши данные и я сама вам напишу:
                     </div>
 
@@ -527,12 +534,16 @@
                             </div>
 
                         </div>
-                    </form>
+                    </form> -->
                 </div>
             </div>
         </div>
-    </section> -->
+    </section>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <script src="js/script.min.js"></script>
 </body>
 
