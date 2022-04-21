@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --dark: #070707;
+    --sizeIndex: calc(1vw + 1vh);
+    --transition: .75s cubic-bezier(.23, .6, 0, 1);
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    background-color: var(--dark);
+    color: #fff;
+    font-family: 'Readex Pro', sans-serif;
+    overflow: hidden;
+    line-height: 1.8;
+}
+
+.slider {
+    position: relative;
+    height: 100%;
+    transform: rotate(15deg);
+    overflow: visible;
+    top: 10vh;
+}
+
+.slider_main{
+z-index: 0;
+}
+
+.slider_wrapper{
+    transition: var(--transition)!important;
+    will-change: transform;
+}
+
+.slider__item {
+    max-height: 85vh;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.slider__img{
+    width: 125%;
+    height: 100%;
+    background-size: cover;
+    position: absolute;
+    left: -100px;
+    transition: var(--transition)!important;
+    will-change: transform;
+}
+
+.slider__item.opened {
+    z-index: 2;
+    width: 100%;
+    transform: rotate(-15deg) scale(1.45);
+    box-shadow: rgba(0 0 0 / .25) 0 0 0 10000px;
+}
+
+.slider__item.opened .slider__img {
+    background-size: 350px;
+    background-repeat: no-repeat;
+    background-position: 100px;
+    will-change: transform;
+}
+
+.discription{
+    position: absolute;
+    font-size: calc(var(--sizeIndex) * .8);
+    left: 10vw;
+    max-width: 34vh;
+    transition: opacity var(--transition), transform var(--transition);
+}
+
+.discription__name {
+    font-size: calc(var(--sizeIndex) * 3);
+    font-weight: 700;
+    display: inline-block;
+    background:linear-gradient(45deg, rgba(255,207,148,1) 15%, rgba(231,255,148,1) 56%, rgba(120,232,255,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.discription.hidden{
+    opacity: 0;
+    transform: translateX(-5vh) translateY(10vh);
+}
+
+@media (min-width: 0px) and (max-width: 679.98px) { 
+    .slider__img{
+        width: 140%;
+        
+    }
+
+    .slider__item.opened .slider__img {
+        background-size: 45vh;
+        background-repeat: no-repeat;
+        background-position: 70px;
+        will-change: transform;
+    }
+
+    .discription{
+        position: absolute;
+        left: 53vw;
+    }
+}
