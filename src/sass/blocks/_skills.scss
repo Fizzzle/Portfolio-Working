@@ -10,7 +10,13 @@
     }
     &__item{
         padding: 30px 30px 25px 30px;
-        border: 1px solid #000000;        
+        border: 1px solid #000000;
+        transition: transform .3s;
+        &:hover{
+            box-shadow: $main-color 1px 1px 5px;
+            border: none;
+            transform: scale(1.02);
+        }        
     }
     &__icons{        
         display: flex;
