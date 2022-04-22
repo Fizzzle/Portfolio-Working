@@ -7,6 +7,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-end;
+    transition: all 2.6s;
     cursor: pointer;
     span {
         display: block;
@@ -16,6 +17,34 @@
     }
     span.long{
         width: 36px;
+    }
+    &:hover{
+        span{
+            transition: all .6s;
+            &:nth-child(1){
+                transform: rotate(-25deg);
+            }
+            &:nth-child(2){
+                width: 50%;
+            }
+            &:nth-child(3){
+                transform: rotate(25deg);
+            }
+        }
+    }
+    &.active{        
+        span{
+            transition: all .6s;
+            &:nth-child(1){
+                transform: rotate(-45deg) translateY(13px);
+            }
+            &:nth-child(2){
+                width: 0%;
+            }
+            &:nth-child(3){
+                transform: rotate(45deg) translateY(-13px);
+            }
+        }
     }
 }
 
@@ -49,6 +78,12 @@
         top: 25px;
         right: 25px;
         cursor: pointer;
+        &:hover{
+            svg{
+                transition: all .6s;
+                transform: rotate(-360deg);
+            }
+        }
     }
     &__list{
         list-style-type: none;
@@ -70,7 +105,7 @@
             height: 15px;
             border-radius: 100%;
             border: 1px solid #000;
-            transition: all .9s;
+            transition: all .6s;
         }    
         &:hover{
             &::before{
